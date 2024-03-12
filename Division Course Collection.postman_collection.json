@@ -1,0 +1,167 @@
+{
+	"info": {
+		"_postman_id": "d5bc7bb2-2d68-4433-93e5-f5edcf88fa9b",
+		"name": "Division Course Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30814477"
+	},
+	"item": [
+		{
+			"name": "api/divisions",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/divisions",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"divisions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/divisions/{division}/courses",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Course 4\",\r\n  \"duration\": 60,\r\n  \"undergraduate\": true,\r\n  \"egLevel\": false,\r\n  \"bfCycle\": 1.5\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/divisions/3/courses",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"divisions",
+						"3",
+						"courses"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/divisions/{division}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/divisions/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"divisions",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/divisions/{division}/courses/{id}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/divisions/2/courses/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"divisions",
+						"2",
+						"courses",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/divisions/{division}/{id}",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Course 5\",\r\n  \"duration\": 60,\r\n  \"undergraduate\": true,\r\n  \"egLevel\": false,\r\n  \"bfCycle\": 5.5\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/divisions/3/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"divisions",
+						"3",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/divisions/{division}/{id}",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 4,\r\n  \"name\": \"Course 5\",\r\n  \"duration\": 60,\r\n  \"undergraduate\": true,\r\n  \"egLevel\": false,\r\n  \"bfCycle\": 5.5,\r\n  \"division\": {\r\n    \"id\": 2,\r\n    \"name\": \"Division 1\"\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/divisions/3/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"divisions",
+						"3",
+						"3"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
